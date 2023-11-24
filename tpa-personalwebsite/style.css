@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush');
+
+#hero, #blogs {
+    background: #FBDCEA;
+}
+
+#about img {
+    transform: scale(0.8, 0.8) rotate(-5deg);
+    border: #fff solid 20px;
+    max-width: 400px;
+}
+
+#hero h1, #about h2, #portfolios h2, #blogs h2, footer h2 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 2.5rem;
+}
+
+#about h2::before, #portfolios h2::before, #blogs h2::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    color: #7E9AE6;
+    margin-bottom: -10px;
+}
+
+#hero h1 {
+    font-size: 8rem;
+    color: #73DCE6;
+    font-weight: bold;
+}
+
+#about {
+    background: #7E9AE6;
+}
+
+#portfolios {
+    background: #73DCE6;
+}
+
+#about img:hover {
+    transform: scale(1) rotate(0deg);
+    transition: transform .2s;
+    z-index: 999;
+}
+
+@media (min-width: 768px) {
+    #portfolios .card:hover {
+        transform: scale(1.3);
+        transition: transform .2s;
+        z-index: 999;
+    }
+}
