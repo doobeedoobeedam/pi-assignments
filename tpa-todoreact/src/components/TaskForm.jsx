@@ -22,9 +22,9 @@ const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={title} onChange={handleInputChange} />
-      <button type="submit">Add Todo</button>
+    <form onSubmit={handleSubmit} className="input">
+      <input type="text" value={title} onChange={handleInputChange} id="input" />
+      <button id="btn" type="submit">+</button>
     </form>
   );
 };

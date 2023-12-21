@@ -1,42 +1,62 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* { 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0; padding: 0; box-sizing: border-box; color: #42606d;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  width: 100%; height: 100vh; padding-top: 30px; gap: 30px; flex-direction: column;
+  display: flex; align-items: center; justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.frame {
+  width: 400px; height: 400px; background: rgb(174,202,238);
+  background: linear-gradient(90deg, 
+  rgba(174,202,238,1) 0%, 
+  rgba(255,210,210,1) 100%);
+  border-radius: 5px; box-shadow: 5px 10px 20px rgba(128, 128, 128, 0.473);
+  display: flex; align-items: center; justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container { 
+  width: 60%; height: 70%; background-color: #fff; border-radius: 3px; 
+  box-shadow: 5px 10px 20px rgba(128, 128, 128, 0.473); padding: 25px 35px; 
+  display: flex; justify-content: space-evenly; flex-direction: column; 
+  min-width: 260px; 
 }
 
-.card {
-  padding: 2em;
+input { display: flex; margin-bottom: 30px; }
+
+#input { background: #F6F1F1; border: 0; padding: 10px; border-radius: 5px; }
+
+#input:focus { outline: none; }
+
+.add-box { display: flex; justify-content: center;}
+
+#btn, .delete {
+  padding: 5px 5px; border: none; color: #fff; transition: 1s;
+  font-size: 20px; cursor: pointer; background: #92baec;
+  border-radius: 5px; margin-left: -10px;
 }
 
-.read-the-docs {
-  color: #888;
+#lists { overflow: scroll; }
+
+.filter { margin: 100px 0 100px 0; background: #000;}
+
+::-webkit-scrollbar { display: none; }
+
+.tasks {
+  display: flex; justify-content: space-evenly; align-items: center; font-size: 13px; font-weight: 400;
+  text-transform: lowercase;
+}
+
+::first-letter { text-transform: uppercase; }
+
+label { width: calc(100% - 15px); transition: 1s; }
+
+input:checked ~ label {
+  text-decoration: line-through; opacity: 0.5; font-style: italic; transition: 1s;
+}
+
+input[type="checkbox"] {
+  width: 15px; height: 15px; accent-color: #92baec; transition: 1s; margin-right: 5px;
 }

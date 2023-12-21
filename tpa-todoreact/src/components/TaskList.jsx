@@ -29,29 +29,29 @@ const TodoList = () => {
   });
 
   return (
-    <div>
-      <label>
-        Show:
-        <select value={filter} onChange={handleFilter}>
-          <option value="ALL">All</option>
-          <option value="ACTIVE">Active</option>
-          <option value="COMPLETED">Completed</option>
-        </select>
-      </label>
-    <ul>
-      {filteredTodos.map(todo => (
-        <li key={todo.id}>
-          <input
-            type="checkbox"
-            checked={todo.completed}
-            onChange={() => handleEdit(todo.id, { ...todo, completed: !todo.completed })}
-          />
-          {todo.title}
-          <button onClick={() => handleDelete(todo.id)}>Delete</button>
-        </li>
-      ))}
-    </ul>
+    <>
+    <div className="filter">
+    <label>
+      Show:
+      <select value={filter} onChange={handleFilter}>
+        <option value="ALL">All</option>
+        <option value="ACTIVE">Active</option>
+        <option value="COMPLETED">Completed</option>
+      </select>
+    </label>
     </div>
+    <div id="lists">
+      {filteredTodos.map(todo => (
+        <div className="tasks" key={todo.id}>            
+          <input type="checkbox" checked={todo.completed} onChange={() => handleEdit(todo.id, { ...todo, completed: !todo.completed })}/>
+          <label>{todo.title}</label>
+          <button onClick={() => handleDelete(todo.id)} className="delete" style={{border:'none', background:'none', color: '#f76868', fontSize: 'x-small'}}>
+            HAPUS
+          </button>
+        </div>
+      ))}
+    </div>
+    </>
   );
 };
 
