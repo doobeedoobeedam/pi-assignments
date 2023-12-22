@@ -1,6 +1,6 @@
-# React + Vite
+# todoreact
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+URL: [doobeedoobeedam.github.io/pi-assignments/tpa-todoreact](https://doobeedoobeedam.github.io/pi-assignments/)
 
 Currently, two official plugins are available:
 
