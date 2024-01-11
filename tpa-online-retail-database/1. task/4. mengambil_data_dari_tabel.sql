@@ -1,0 +1,2 @@
+-- Sebagai contoh, gunakan tabel `produk`, ambil semua kolom dan datanya, lalu lakukan ordering secara ke atas berdasarkan id kategori, dengan query berikut:
+SELECT * FROM `produk` ORDER BY `produk`.`kategori_id` ASC;
