@@ -24,10 +24,11 @@ exports.detail = async (req, res) => {
       return await res
         .status(404)
         .json({ success: false, message: "Data tidak ditemukan!", data: [] });
+    } else {
+      return await res
+        .status(200)
+        .json({ success: true, message: "Success!", data: tododata });
     }
-    return await res
-      .status(200)
-      .json({ success: true, message: "Success!", data: tododata });
   } catch (error) {
     return await res.status(500).json({
       message: error?.message || "Server error!",
