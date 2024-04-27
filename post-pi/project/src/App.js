@@ -45,11 +45,11 @@ function App() {
             <dl className="details">
               <div>
                 <dt>Defense</dt>
-                <dd>100%</dd>
+                <dd>{item.stats.Defense}%</dd>
               </div>
               <div>
                 <dt>Speed</dt>
-                <dd>4.5%</dd>
+                <dd>{item.stats.Speed}%</dd>
               </div>
             </dl>
           </div>

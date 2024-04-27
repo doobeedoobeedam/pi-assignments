@@ -2,22 +2,21 @@
 	line-height: 1.5;
 	min-height: 100vh;
   background-color: #eaeef6;
-  padding: 30px 30px;
+  padding: 30px 40px;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
   margin-top: 30px;
 }
 
 .card {
 	border-radius: 16px;
 	box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
-	max-width: 300px;
+	max-width: 250px;
   background-color: #fff;
   padding: 20px;
   text-align: center;
