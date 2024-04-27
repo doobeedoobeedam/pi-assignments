@@ -1,0 +1,57 @@
+.App {
+	line-height: 1.5;
+	min-height: 100vh;
+  background-color: #eaeef6;
+  padding: 30px 30px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+	border-radius: 16px;
+	box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+	max-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 80%;
+}
+
+.details {
+  display: flex;
+  gap: 1rem;
+}
+
+.details div {
+    padding: .75em 1em;
+    background-color: #f1eeff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: .125em;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.details div dt {
+  font-size: .875rem;
+  color: #a69fd6;
+  text-align: center;
+}
+
+.details div dd {
+  color: #6558d3;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+}
